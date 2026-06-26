@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Chai Coffee — Where Every Cup Begins a Conversation | Dabolim, Goa</title>
+<meta name="description" content="Cafe Chai Coffee in Dabolim, Goa. Premium multi-cuisine café with bao buns, Thai curry, artisan coffee, live music and lush outdoor seating. Rated 4.7★ with 2100+ reviews. Near Goa Airport.">
+<meta name="keywords" content="cafe dabolim goa, coffee goa, bao buns goa, thai curry goa, airport cafe goa, live music cafe goa, best cafe near goa airport">
+<meta property="og:title" content="Cafe Chai Coffee — Dabolim, Goa">
+<meta property="og:description" content="Great Food. Fresh Coffee. Goan Vibes. Rated 4.7★ with 2100+ reviews.">
+<meta property="og:type" content="restaurant">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Cafe Chai Coffee",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lane No.3, Upper Orchard, Near MES College Road",
+    "addressLocality": "Dabolim",
+    "addressRegion": "Goa",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-XXXXXXXXXX",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "2100"
+  },
+  "priceRange": "₹200–₹600",
+  "servesCuisine": ["Indian","Chinese","Continental","Italian","Asian","Cafe"],
+  "openingHours": "Mo-Su 08:00-22:00",
+  "hasMap": "https://maps.google.com"
+}
+</script>
+
+<style>
+  /* ===== TOKENS & RESET ===== */
+  :root {
+    --forest: #1a3a2a;
+    --forest-mid: #2d5a3d;
+    --forest-light: #4a7c5c;
+    --beige: #f5f0e8;
+    --beige-dark: #ede5d5;
+    --cream: #faf8f4;
+    --wood: #8b5e3c;
+    --wood-light: #c49a6c;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --white: #ffffff;
+    --text-dark: #1c1c1c;
+    --text-mid: #4a4a4a;
+    --text-muted: #888;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-dark] {
+    --beige: #111a14;
+    --beige-dark: #0d1410;
+    --cream: #141e17;
+    --text-dark: #f0ede8;
+    --text-mid: #c8c4bb;
+    --text-muted: #778;
+    --white: #1e2d23;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    transition: background var(--transition), color var(--transition);
+  }
+  img { display: block; width: 100%; height: auto; }
+  a { text-decoration: none; color: inherit; }
+  button { font-family: var(--sans); cursor: pointer; border: none; background: none; }
+
+  /* ===== LOADER ===== */
+  #loader {
+    position: fixed; inset: 0; z-index: 9999;
+    background: var(--forest);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 16px;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+  #loader.hidden { opacity: 0; visibility: hidden; }
+  .loader-logo {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+    animation: fadeIn 0.8s ease both;
+  }
+  .loader-bar {
+    width: 120px; height: 2px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .loader-fill {
+    height: 100%; width: 0%;
+    background: var(--gold);
+    border-radius: 1px;
+    animation: loadFill 1.4s ease forwards;
+  }
+  @keyframes loadFill { to { width: 100%; } }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+    height: 72px;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(26, 58, 42, 0.96);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 2px 32px rgba(0,0,0,0.18);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color var(--transition);
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--gold);
+    transform: scaleX(0); transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-actions { display: flex; align-items: center; gap: 12px; }
+  .btn-reserve-nav {
+    padding: 10px 24px;
+    background: var(--gold);
+    color: var(--forest);
+    border-radius: 32px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background var(--transition), transform 0.2s;
+  }
+  .btn-reserve-nav:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .theme-toggle {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.8);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    transition: all var(--transition);
+  }
+  .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+  .menu-toggle {
+    display: none;
+    flex-direction: column; gap: 5px;
+    width: 28px; padding: 4px;
+  }
+  .menu-toggle span {
+    display: block; height: 1.5px;
+    background: white; border-radius: 1px;
+    transition: all 0.3s ease;
+  }
+  .mobile-nav {
+    display: none;
+    position: fixed; inset: 0; z-index: 999;
+    background: var(--forest);
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 32px;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--beige);
+    transition: color 0.2s;
+  }
+  .mobile-nav a:hover { color: var(--gold); }
+  .mobile-close {
+    position: absolute; top: 24px; right: 28px;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+  }
+
+  /* ===== HERO ===== */
+  #hero {
+    position: relative;
+    height: 100vh; min-height: 640px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(10,30,18,0.6) 0%, rgba(10,30,18,0.4) 50%, rgba(10,30,18,0.75) 100%),
+      url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600&q=80') center/cover no-repeat;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+  }
+  .hero-bg.loaded { transform: scale(1); }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    animation: heroFade 1.2s ease 0.3s both;
+  }
+  @keyframes heroFade {
+    from { opacity: 0; transform: translateY(32px); }
+    to { opacity: 1; transform: none; }
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 32px;
+    padding: 8px 20px;
+    margin-bottom: 28px;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.12;
+    margin-bottom: 20px;
+    max-width: 760px;
+  }
+  .hero-title em { color: var(--gold); font-style: italic; }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+    line-height: 2;
+  }
+  .hero-btns {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-primary {
+    padding: 16px 36px;
+    background: var(--gold);
+    color: var(--forest);
+    border-radius: 50px;
+    font-size: 0.875rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.4); }
+  .btn-outline {
+    padding: 15px 36px;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.875rem; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+  .scroll-hint {
+    position: absolute; bottom: 36px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .scroll-arrow {
+    width: 24px; height: 36px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    display: flex; align-items: flex-start; justify-content: center;
+    padding-top: 6px;
+  }
+  .scroll-dot {
+    width: 4px; height: 8px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 2px;
+    animation: scrollBounce 1.6s ease infinite;
+  }
+  @keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    60% { transform: translateY(10px); opacity: 0.3; }
+  }
+
+  /* ===== STATS BAR ===== */
+  .stats-bar {
+    background: var(--forest);
+    padding: 28px 40px;
+    display: flex; justify-content: center; gap: 80px; flex-wrap: wrap;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2rem; font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 100px 40px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-eyebrow {
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--wood);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  [data-dark] .section-title { color: var(--gold-light); }
+  .section-body {
+    font-size: 1.05rem; line-height: 1.8;
+    color: var(--text-mid);
+    max-width: 580px;
+  }
+
+  /* ===== ABOUT ===== */
+  #about { background: var(--beige); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+  }
+  .about-image-wrap {
+    position: relative;
+  }
+  .about-img-main {
+    border-radius: var(--radius-lg);
+    height: 520px;
+    object-fit: cover;
+    background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80') center/cover;
+    box-shadow: 32px 32px 0 var(--beige-dark);
+  }
+  .about-img-accent {
+    position: absolute;
+    bottom: -32px; right: -32px;
+    width: 200px; height: 200px;
+    border-radius: var(--radius-md);
+    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80') center/cover;
+    border: 6px solid var(--cream);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  }
+  .about-text { padding-right: 20px; }
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .about-feature {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 16px;
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .about-feature:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .feat-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: var(--forest);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+  .feat-label { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); margin-bottom: 2px; }
+  .feat-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+
+  /* ===== MENU ===== */
+  #menu { background: var(--cream); }
+  .menu-header { text-align: center; margin-bottom: 60px; }
+  .menu-header .section-body { margin: 0 auto; }
+  .menu-filters {
+    display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .filter-btn {
+    padding: 10px 24px;
+    border-radius: 32px;
+    border: 1.5px solid var(--beige-dark);
+    font-size: 0.8rem; font-weight: 500;
+    color: var(--text-mid);
+    transition: all 0.2s;
+    background: transparent;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: white;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+  }
+  .dish-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  .dish-card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(0,0,0,0.12); }
+  .dish-img {
+    height: 220px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+  }
+  .dish-card:hover .dish-img { transform: scale(1.06); }
+  .dish-body { padding: 20px 24px 24px; }
+  .dish-badge {
+    display: inline-block;
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--wood);
+    background: rgba(139,94,60,0.1);
+    border-radius: 4px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+  .chef-badge {
+    position: absolute; top: 16px; right: 16px;
+    background: var(--gold);
+    color: var(--forest);
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .dish-name {
+    font-family: var(--serif);
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+  [data-dark] .dish-name { color: var(--gold-light); }
+  .dish-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+  .dish-price {
+    font-size: 1.1rem; font-weight: 600;
+    color: var(--wood);
+    margin-top: 14px;
+  }
+
+  /* ===== EXPERIENCE ===== */
+  #experience { background: var(--forest); }
+  #experience .section-title { color: var(--gold-light); }
+  #experience .section-eyebrow { color: var(--wood-light); }
+  #experience .section-body { color: rgba(255,255,255,0.65); }
+  .exp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 60px;
+  }
+  .exp-card {
+    padding: 32px 28px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .exp-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-4px);
+  }
+  .exp-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .exp-title {
+    font-family: var(--serif);
+    font-size: 1.15rem; font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+  }
+  .exp-desc { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
+
+  /* ===== GALLERY ===== */
+  #gallery { background: var(--beige); }
+  .gallery-filters {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin: 40px 0 32px;
+  }
+  .gallery-grid {
+    columns: 3;
+    column-gap: 16px;
+  }
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .gallery-item img, .gallery-item .gal-img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: var(--radius-sm);
+  }
+  .gallery-item:hover img, .gallery-item:hover .gal-img { transform: scale(1.04); }
+  .gal-overlay {
+    position: absolute; inset: 0;
+    background: rgba(26,58,42,0);
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s;
+    border-radius: var(--radius-sm);
+  }
+  .gal-overlay span {
+    color: white; font-size: 1.5rem;
+    opacity: 0; transform: scale(0.7);
+    transition: all 0.3s;
+  }
+  .gallery-item:hover .gal-overlay { background: rgba(26,58,42,0.5); }
+  .gallery-item:hover .gal-overlay span { opacity: 1; transform: scale(1); }
+  .gal-img {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Lightbox */
+  #lightbox {
+    display: none; position: fixed; inset: 0; z-index: 9000;
+    background: rgba(0,0,0,0.92);
+    align-items: center; justify-content: center;
+    padding: 40px;
+  }
+  #lightbox.open { display: flex; }
+  #lightbox img {
+    max-width: 900px; max-height: 85vh;
+    border-radius: var(--radius-md);
+    object-fit: contain;
+  }
+  .lb-close {
+    position: absolute; top: 24px; right: 32px;
+    color: white; font-size: 2rem;
+    cursor: pointer; line-height: 1;
+    transition: color 0.2s;
+  }
+  .lb-close:hover { color: var(--gold); }
+
+  /* ===== REVIEWS ===== */
+  #reviews { background: var(--cream); }
+  .reviews-header { text-align: center; margin-bottom: 64px; }
+  .stars-display {
+    display: flex; gap: 4px; justify-content: center;
+    margin: 16px 0;
+  }
+  .star { color: var(--gold); font-size: 1.3rem; }
+  .reviews-carousel { position: relative; overflow: hidden; }
+  .reviews-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.5s ease;
+  }
+  .review-card {
+    flex: 0 0 calc(33.333% - 16px);
+    min-width: 280px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--beige-dark);
+  }
+  [data-dark] .review-card { background: var(--beige); }
+  .review-quote { font-size: 3rem; color: var(--gold); line-height: 0.8; margin-bottom: 16px; font-family: Georgia, serif; }
+  .review-text { font-size: 0.95rem; color: var(--text-mid); line-height: 1.75; font-style: italic; margin-bottom: 24px; }
+  .reviewer { display: flex; align-items: center; gap: 12px; }
+  .reviewer-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--forest);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 1.1rem;
+    color: var(--gold);
+    font-weight: 700; flex-shrink: 0;
+  }
+  .reviewer-name { font-weight: 600; font-size: 0.9rem; color: var(--text-dark); }
+  .reviewer-meta { font-size: 0.78rem; color: var(--text-muted); }
+  .carousel-nav {
+    display: flex; justify-content: center; gap: 12px;
+    margin-top: 40px;
+  }
+  .carousel-btn {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--beige-dark);
+    background: var(--white);
+    font-size: 1.1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+  }
+  [data-dark] .carousel-btn { background: var(--beige); }
+  .carousel-btn:hover { background: var(--forest); color: white; border-color: var(--forest); }
+  .carousel-dots { display: flex; gap: 8px; align-items: center; }
+  .carousel-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--beige-dark);
+    transition: all 0.2s; cursor: pointer;
+  }
+  .carousel-dot.active { background: var(--forest); width: 24px; border-radius: 4px; }
+
+  /* ===== VISIT ===== */
+  #visit { background: var(--beige); }
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+    align-items: start;
+  }
+  .map-placeholder {
+    height: 400px;
+    border-radius: var(--radius-md);
+    background: var(--forest-mid);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 12px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .map-placeholder iframe {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: none; border-radius: var(--radius-md);
+  }
+  .visit-info { display: flex; flex-direction: column; gap: 28px; }
+  .info-card {
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+  [data-dark] .info-card { background: var(--beige-dark); }
+  .info-label {
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--wood);
+    margin-bottom: 10px;
+  }
+  .info-val { font-size: 1rem; color: var(--text-dark); line-height: 1.7; }
+  .hours-row {
+    display: flex; justify-content: space-between;
+    font-size: 0.9rem; padding: 6px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: var(--text-mid);
+  }
+  .hours-row:last-child { border-bottom: none; }
+  .hours-row .day { font-weight: 500; }
+  .visit-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .btn-visit {
+    padding: 12px 24px;
+    border-radius: 32px;
+    font-size: 0.85rem; font-weight: 600;
+    transition: all 0.25s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .btn-visit.primary { background: var(--forest); color: white; }
+  .btn-visit.primary:hover { background: var(--forest-mid); transform: translateY(-2px); }
+  .btn-visit.secondary {
+    border: 1.5px solid var(--forest);
+    color: var(--forest);
+    background: transparent;
+  }
+  .btn-visit.secondary:hover { background: var(--forest); color: white; }
+
+  /* ===== RESERVATION ===== */
+  #reservation {
+    background: var(--forest);
+    position: relative;
+    overflow: hidden;
+  }
+  #reservation::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #reservation .section-title { color: var(--gold-light); }
+  #reservation .section-eyebrow { color: var(--wood-light); }
+  #reservation .section-body { color: rgba(255,255,255,0.65); }
+  .res-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    margin-top: 60px;
+    align-items: center;
+  }
+  .res-features { display: flex; flex-direction: column; gap: 20px; }
+  .res-feat {
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .res-feat-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+  }
+  .res-feat-title { font-weight: 600; color: white; margin-bottom: 4px; }
+  .res-feat-desc { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .res-form {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    padding: 40px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label {
+    display: block;
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 8px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius-sm);
+    color: white;
+    font-size: 0.95rem;
+    font-family: var(--sans);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input::placeholder,
+  .form-group select::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+  }
+  .form-group select option { background: var(--forest); }
+  .form-group textarea { resize: none; height: 100px; }
+  .btn-submit {
+    width: 100%;
+    padding: 18px;
+    background: var(--gold);
+    color: var(--forest);
+    border-radius: 50px;
+    font-size: 0.9rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.25);
+  }
+  .btn-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .form-success {
+    display: none;
+    text-align: center; padding: 40px 20px;
+    color: white;
+  }
+  .form-success-icon { font-size: 3rem; margin-bottom: 16px; }
+  .form-success h3 { font-family: var(--serif); font-size: 1.8rem; color: var(--gold); margin-bottom: 8px; }
+  .form-success p { color: rgba(255,255,255,0.65); }
+
+  /* ===== FAQ ===== */
+  #faq { background: var(--cream); }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 60px;
+  }
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--beige-dark);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  [data-dark] .faq-item { background: var(--beige); }
+  .faq-item:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .faq-q {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 24px;
+    cursor: pointer;
+    font-weight: 600; font-size: 0.95rem;
+    color: var(--text-dark);
+    user-select: none;
+  }
+  .faq-toggle {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--beige-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+    transition: all 0.3s;
+  }
+  .faq-item.open .faq-toggle { background: var(--forest); color: white; transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    font-size: 0.9rem; color: var(--text-muted);
+    line-height: 1.7;
+    padding: 0 24px;
+  }
+  .faq-item.open .faq-a { max-height: 200px; padding: 0 24px 20px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0e1f16;
+    color: rgba(255,255,255,0.65);
+    padding: 72px 40px 32px;
+  }
+  .footer-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 48px;
+    margin-bottom: 56px;
+  }
+  .footer-brand .logo {
+    font-family: var(--serif);
+    font-size: 1.5rem; font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .footer-brand .logo span { color: var(--gold); }
+  .footer-brand p { font-size: 0.875rem; line-height: 1.75; max-width: 260px; }
+  .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
+  .social-link {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    transition: all 0.2s;
+    color: rgba(255,255,255,0.6);
+  }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
+  .footer-col h4 {
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul a {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: var(--gold); }
+  .footer-hours { display: flex; flex-direction: column; gap: 8px; }
+  .f-hour-row { display: flex; justify-content: space-between; font-size: 0.8rem; }
+  .footer-divider {
+    max-width: 1200px; margin: 0 auto;
+    border: none; border-top: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 24px;
+  }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    font-size: 0.8rem;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.4); transition: color 0.2s; }
+  .footer-bottom a:hover { color: var(--gold); }
+
+  /* ===== FLOATING ELEMENTS ===== */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 28px; right: 28px; z-index: 500;
+    width: 56px; height: 56px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: all 0.3s;
+    color: white;
+  }
+  .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+  .back-top {
+    position: fixed;
+    bottom: 92px; right: 28px; z-index: 500;
+    width: 44px; height: 44px;
+    background: var(--forest);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 1.1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    opacity: 0; pointer-events: none;
+    transition: all 0.3s;
+  }
+  .back-top.visible { opacity: 1; pointer-events: all; }
+  .back-top:hover { background: var(--forest-mid); transform: translateY(-3px); }
+
+  /* ===== ANIMATIONS ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-left.visible { opacity: 1; transform: none; }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-right.visible { opacity: 1; transform: none; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links, .btn-reserve-nav { display: none; }
+    .menu-toggle { display: flex; }
+    section { padding: 72px 24px; }
+    .about-grid, .visit-grid, .res-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-img-accent { display: none; }
+    .gallery-grid { columns: 2; }
+    .reviews-track .review-card { flex: 0 0 calc(100% - 0px); }
+    .faq-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-bar { gap: 40px; padding: 28px 24px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .gallery-grid { columns: 1; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .exp-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">☕ Cafe Chai Coffee</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">Cafe <span>Chai</span> Coffee</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    <a href="#reservation" class="btn-reserve-nav">Reserve a Table</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#menu" class="mobile-link">Menu</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#gallery" class="mobile-link">Gallery</a>
+  <a href="#reviews" class="mobile-link">Reviews</a>
+  <a href="#visit" class="mobile-link">Visit</a>
+  <a href="#reservation" class="mobile-link">Reserve</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">⭐ 4.7 · 2100+ Reviews · Dabolim, Goa</div>
+    <h1 class="hero-title">Where Every Cup Begins<br><em>a Conversation</em></h1>
+    <p class="hero-sub">Great Food &nbsp;·&nbsp; Fresh Coffee &nbsp;·&nbsp; Goan Vibes</p>
+    <div class="hero-btns">
+      <a href="#reservation" class="btn-primary">Reserve a Table</a>
+      <a href="#menu" class="btn-outline">Explore Menu</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-arrow"><div class="scroll-dot"></div></div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num" data-count="4.7">0</div>
+    <div class="stat-label">Star Rating</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" data-count="2100">0</div>
+    <div class="stat-label">Happy Reviews</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" data-count="7">0</div>
+    <div class="stat-label">Cuisines</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" data-count="5">0</div>
+    <div class="stat-label">Years of Joy</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal-left">
+        <div class="about-img-main"></div>
+        <div class="about-img-accent"></div>
+      </div>
+      <div class="about-text reveal-right">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title">More Than a Meal.<br>It's a Feeling.</h2>
+        <p class="section-body">
+          Tucked away on a quiet lane near MES College Road in Dabolim, Cafe Chai Coffee was born from a simple belief — that great food tastes even better in a beautiful place, with people you love.
+        </p>
+        <p class="section-body" style="margin-top: 16px;">
+          We source the freshest ingredients, brew coffee with intention, and set the stage with warm lights, swaying greens, and music that lingers. Whether you're a traveller catching a breath before your flight, a student finding your favourite corner, or a family celebrating the ordinary — you belong here.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feat-icon">🌿</div>
+            <div>
+              <div class="feat-label">Lush Outdoor Seating</div>
+              <div class="feat-desc">Dine under the open sky in our garden-style terrace</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">🎵</div>
+            <div>
+              <div class="feat-label">Live Music Evenings</div>
+              <div class="feat-desc">Curated performances every weekend</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">✈️</div>
+            <div>
+              <div class="feat-label">Near Goa Airport</div>
+              <div class="feat-desc">Just minutes from the terminal — perfect transit stop</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">🫕</div>
+            <div>
+              <div class="feat-label">Fresh Ingredients</div>
+              <div class="feat-desc">Locally sourced, seasonally inspired every single day</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU / SIGNATURE DISHES -->
+<section id="menu">
+  <div class="section-inner">
+    <div class="menu-header reveal">
+      <p class="section-eyebrow">Signature Dishes</p>
+      <h2 class="section-title">Crafted with Care,<br>Remembered Forever</h2>
+      <p class="section-body">From street-food soul to fine café refinement — our menu is a love letter to flavours from across the world, made right here in Goa.</p>
+    </div>
+    <div class="menu-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="mains">Mains</button>
+      <button class="filter-btn" data-filter="cafe">Café</button>
+      <button class="filter-btn" data-filter="desserts">Desserts</button>
+      <button class="filter-btn" data-filter="drinks">Drinks</button>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-eyebrow">Why You'll Love It Here</p>
+      <h2 class="section-title">Every Detail,<br>Designed for You</h2>
+      <p class="section-body">We didn't just build a café. We built a world you'll want to return to.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <span class="exp-icon">🌳</span>
+        <div class="exp-title">Outdoor Garden Seating</div>
+        <div class="exp-desc">Breathe in fresh air surrounded by lush greenery. Our outdoor terrace is Goa at its most peaceful.</div>
+      </div>
+      <div class="exp-card reveal">
+        <span class="exp-icon">🛋️</span>
+        <div class="exp-title">Cosy Indoor Lounge</div>
+        <div class="exp-desc">Warm lighting, earthy textures, and the kind of comfort that makes time disappear.</div>
+      </div>
+      <div class="exp-card reveal">
+        <span class="exp-icon">🎸</span>
+        <div class="exp-title">Live Music Nights</div>
+        <div class="exp-desc">Handpicked artists perform every weekend. The background always sounds this good.</div>
+      </div>
+      <div class="exp-card reveal">
+        <span class="exp-icon">💻</span>
+        <div class="exp-title">Work-Friendly Space</div>
+        <div class="exp-desc">Fast WiFi, power points, and just the right amount of ambient buzz to keep you in flow.</div>
+      </div>
+      <div class="exp-card reveal">
+        <span class="exp-icon">📶</span>
+        <div class="exp-title">Free High-Speed WiFi</div>
+        <div class="exp-desc">Stay connected without a care. Because good coffee and bad internet never mix.</div>
+      </div>
+      <div class="exp-card reveal">
+        <span class="exp-icon">👨‍👩‍👧</span>
+        <div class="exp-title">Family Friendly</div>
+        <div class="exp-desc">Ample space, a welcoming vibe, and a menu that delights every age group.</div>
+      </div>
+      <div class="exp-card reveal">
+        <span class="exp-icon">🅿️</span>
+        <div class="exp-title">Easy Parking</div>
+        <div class="exp-desc">Arrive with ease. Ample parking right outside — one less thing to worry about.</div>
+      </div>
+      <div class="exp-card reveal">
+        <span class="exp-icon">✈️</span>
+        <div class="exp-title">2 Min from Airport</div>
+        <div class="exp-desc">The last great meal before you fly, or the first real welcome back to Goa.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-eyebrow">Gallery</p>
+      <h2 class="section-title">See It to<br>Believe It</h2>
+    </div>
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-gfilter="all">All</button>
+      <button class="filter-btn" data-gfilter="food">Food</button>
+      <button class="filter-btn" data-gfilter="cafe">Café</button>
+      <button class="filter-btn" data-gfilter="desserts">Desserts</button>
+      <button class="filter-btn" data-gfilter="coffee">Coffee</button>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <img id="lbImg" src="" alt="Gallery image">
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="reviews-header reveal">
+      <p class="section-eyebrow">What People Say</p>
+      <h2 class="section-title">Loved by Locals,<br>Adored by Travellers</h2>
+      <div class="stars-display">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        <span class="star">★</span><span class="star">★</span>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">4.7 out of 5 · 2,100+ Google Reviews</p>
+    </div>
+    <div class="reviews-carousel reveal">
+      <div class="reviews-track" id="reviewsTrack">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="revPrev">←</button>
+      <div class="carousel-dots" id="reviewDots"></div>
+      <button class="carousel-btn" id="revNext">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT US -->
+<section id="visit">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-eyebrow">Find Us</p>
+      <h2 class="section-title">Come Find<br>Your Corner</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="map-placeholder reveal-left">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.8!2d73.8635!3d15.3804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDIyJzQ5LjQiTiA3M8KwNTEnNDguNiJF!5e0!3m2!1sen!2sin!4v1680000000000"
+          allowfullscreen="" loading="lazy" title="Cafe Chai Coffee on Google Maps">
+        </iframe>
+      </div>
+      <div class="visit-info reveal-right">
+        <div class="info-card">
+          <div class="info-label">📍 Address</div>
+          <div class="info-val">Lane No.3, Upper Orchard<br>Near MES College Road<br>Dabolim, Goa — 403110</div>
+        </div>
+        <div class="info-card">
+          <div class="info-label">🕐 Opening Hours</div>
+          <div class="hours-row"><span class="day">Monday – Friday</span><span>8:00 AM – 10:00 PM</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span>8:00 AM – 11:00 PM</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span>9:00 AM – 10:00 PM</span></div>
+        </div>
+        <div class="info-card">
+          <div class="info-label">📞 Contact</div>
+          <div class="info-val">+91 98765 43210</div>
+        </div>
+        <div class="visit-actions">
+          <a href="https://maps.google.com" target="_blank" class="btn-visit primary">🗺️ Get Directions</a>
+          <a href="tel:+919876543210" class="btn-visit secondary">📞 Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation">
+  <div class="section-inner">
+    <div class="res-grid">
+      <div class="res-features reveal-left">
+        <p class="section-eyebrow">Reserve a Table</p>
+        <h2 class="section-title">Secure Your<br>Perfect Moment</h2>
+        <p class="section-body" style="margin-bottom: 40px;">Tables fill up fast — especially on weekends and live music nights. Book yours and arrive to an experience waiting for you.</p>
+        <div class="res-feat">
+          <div class="res-feat-icon">⚡</div>
+          <div>
+            <div class="res-feat-title">Instant Confirmation</div>
+            <div class="res-feat-desc">We'll WhatsApp your booking details within minutes.</div>
+          </div>
+        </div>
+        <div class="res-feat">
+          <div class="res-feat-icon">🎵</div>
+          <div>
+            <div class="res-feat-title">Live Music Tables</div>
+            <div class="res-feat-desc">Request front-row spots for our weekend performances.</div>
+          </div>
+        </div>
+        <div class="res-feat">
+          <div class="res-feat-icon">🎂</div>
+          <div>
+            <div class="res-feat-title">Special Occasions</div>
+            <div class="res-feat-desc">Birthdays, anniversaries, gatherings — we'll make it unforgettable.</div>
+          </div>
+        </div>
+        <div class="res-feat">
+          <div class="res-feat-icon">🚫</div>
+          <div>
+            <div class="res-feat-title">No Prepayment</div>
+            <div class="res-feat-desc">Just show up. No cards, no deposits — just your hunger.</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="res-form" id="resForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Your Name</label>
+              <input type="text" id="fname" placeholder="e.g. Priya Sharma">
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone Number</label>
+              <input type="tel" id="fphone" placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fguests">Number of Guests</label>
+              <select id="fguests">
+                <option value="">Select guests</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5–8 Guests</option>
+                <option>9+ Guests</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fdate">Preferred Date</label>
+              <input type="date" id="fdate">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ftime">Preferred Time</label>
+            <select id="ftime">
+              <option value="">Select time</option>
+              <option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option>
+              <option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option>
+              <option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option>
+              <option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option>
+              <option>8:00 PM</option><option>9:00 PM</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fspecial">Special Request</label>
+            <textarea id="fspecial" placeholder="Birthday celebration? Outdoor seating? Dietary preferences?"></textarea>
+          </div>
+          <button class="btn-submit" id="submitRes">Confirm My Reservation ✓</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">🎉</div>
+          <h3>You're all set!</h3>
+          <p>We've received your reservation and will WhatsApp you a confirmation shortly. We can't wait to see you!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="reveal" style="text-align: center; margin-bottom: 16px;">
+      <p class="section-eyebrow">FAQs</p>
+      <h2 class="section-title">Good Questions,<br>Straight Answers</h2>
+    </div>
+    <div class="faq-grid" id="faqGrid">
+      <!-- Injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">Cafe <span>Chai</span> Coffee</div>
+      <p>Where every cup begins a conversation. Find us in Dabolim, Goa — your perfect stop for great food, fresh coffee, and Goan vibes.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+        <a href="https://wa.me/919876543210" class="social-link" aria-label="WhatsApp">💬</a>
+        <a href="#reviews" class="social-link" aria-label="Google Reviews">⭐</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#menu">Our Menu</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reservation">Reserve a Table</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Cuisine</h4>
+      <ul>
+        <li><a href="#menu">Indian</a></li>
+        <li><a href="#menu">Chinese</a></li>
+        <li><a href="#menu">Continental</a></li>
+        <li><a href="#menu">Italian</a></li>
+        <li><a href="#menu">Asian</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <div class="footer-hours">
+        <div class="f-hour-row"><span>Mon–Fri</span><span>8 AM–10 PM</span></div>
+        <div class="f-hour-row"><span>Saturday</span><span>8 AM–11 PM</span></div>
+        <div class="f-hour-row"><span>Sunday</span><span>9 AM–10 PM</span></div>
+      </div>
+      <div style="margin-top: 20px; font-size: 0.85rem;">
+        <div>📍 Dabolim, Goa</div>
+        <div style="margin-top: 6px;">📞 +91 98765 43210</div>
+      </div>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <span>© 2025 Cafe Chai Coffee. All rights reserved.</span>
+    <span>Made with ❤️ in Goa &nbsp;·&nbsp; <a href="#">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank" aria-label="WhatsApp us">💬</a>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<script>
+// ===== DATA =====
+const dishes = [
+  { name: 'Bao Buns', desc: 'Pillowy steamed buns stuffed with spiced fillings and our house sauces. The dish that started it all.', price: '₹220', category: 'mains', chef: true, bg: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80', badge: 'Asian' },
+  { name: 'Thai Curry', desc: 'Aromatic coconut milk curry with fresh vegetables and fragrant Thai basil. Served with jasmine rice.', price: '₹320', category: 'mains', chef: true, bg: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80', badge: 'Asian' },
+  { name: 'Wood-Fired Pizza', desc: 'Thin crisp base, house tomato, stretch mozzarella, and fresh toppings. Italy meets Goa.', price: '₹380', category: 'mains', chef: false, bg: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80', badge: 'Italian' },
+  { name: 'Artisan Coffee', desc: 'Single-origin beans, expertly pulled. Choose your pour-over, cold brew, or a latte with latte art.', price: '₹180', category: 'cafe', chef: true, bg: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80', badge: 'Café' },
+  { name: 'Tapri Chai', desc: 'Our signature street-style masala chai — spiced, sweet, strong. Served in a kulhad.', price: '₹80', category: 'drinks', chef: false, bg: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80', badge: 'Drinks' },
+  { name: 'Baked Cheesecake', desc: 'New York style cheesecake with berry compote. Dense, creamy, and impossible to share.', price: '₹260', category: 'desserts', chef: true, bg: 'https://images.unsplash.com/photo-1567171466295-4afa63d45416?w=600&q=80', badge: 'Desserts' },
+  { name: 'Chocolate Brownies', desc: 'Fudgy, rich, slightly underdone — the way a brownie was always meant to be. Served warm.', price: '₹180', category: 'desserts', chef: false, bg: 'https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=600&q=80', badge: 'Desserts' },
+  { name: 'Momos', desc: 'Juicy dumplings with spiced fillings, pan-seared or steamed, with our fiery house chutney.', price: '₹200', category: 'mains', chef: false, bg: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&q=80', badge: 'Asian' },
+  { name: 'Milkshakes', desc: 'Thick, cold, over-the-top milkshakes in seasonal flavours. Instagram ready and dangerously good.', price: '₹220', category: 'drinks', chef: false, bg: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600&q=80', badge: 'Drinks' },
+];
+
+const galleryItems = [
+  { src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80', category: 'cafe', h: 280 },
+  { src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80', category: 'food', h: 220 },
+  { src: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80', category: 'coffee', h: 260 },
+  { src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80', category: 'coffee', h: 200 },
+  { src: 'https://images.unsplash.com/photo-1567171466295-4afa63d45416?w=600&q=80', category: 'desserts', h: 240 },
+  { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80', category: 'cafe', h: 320 },
+  { src: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80', category: 'food', h: 200 },
+  { src: 'https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=600&q=80', category: 'desserts', h: 220 },
+  { src: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600&q=80', category: 'coffee', h: 260 },
+];
+
+const reviews = [
+  { text: "We stopped here on our way to catch a flight and ended up wishing we could miss it. The bao buns are life-changing and the garden seating is simply gorgeous. This is what Goa should feel like.", name: "Ananya R.", meta: "Traveller from Mumbai", initials: "AR", stars: 5 },
+  { text: "The Thai curry and jasmine rice combo made me forget I was in a café and not a restaurant in Bangkok. The ambience is beautiful — warm lights, greenery, just magical. We stayed for 3 hours.", name: "Rajan K.", meta: "Local regular", initials: "RK", stars: 5 },
+  { text: "We brought our family here for a Sunday brunch. Kids loved the milkshakes, we loved the brownies and chai. The staff was so warm and attentive. Easily the best café in South Goa.", name: "Meena & Suresh P.", meta: "Family from Bangalore", initials: "MS", stars: 5 },
+  { text: "The live music on Friday was incredible — acoustic covers, fairy lights, and the best cold brew I've had in India. This place is everything a café should be.", name: "James T.", meta: "UK Tourist", initials: "JT", stars: 5 },
+  { text: "I've worked remotely from here twice this week. Fast WiFi, excellent coffee, and the right vibe. The momos are unbelievably good. This is my Goa office now.", name: "Kritika M.", meta: "Digital Nomad", initials: "KM", stars: 5 },
+  { text: "As someone who travels through Goa airport frequently, Cafe Chai Coffee has become my pre-flight ritual. The cheesecake alone is worth the detour. Consistently excellent.", name: "Arjun N.", meta: "Frequent Flyer", initials: "AN", stars: 5 },
+];
+
+const faqs = [
+  { q: "Is parking available?", a: "Yes! We have ample free parking right outside our entrance. There's space for cars and two-wheelers without any hassle." },
+  { q: "Do I need to make a reservation?", a: "Walk-ins are always welcome, but we recommend booking a table — especially on weekends and live music evenings — to guarantee your spot." },
+  { q: "Are pets allowed?", a: "We love furry guests! Leashed pets are welcome in our outdoor garden seating area. Just give us a heads-up when you book." },
+  { q: "Do you have vegetarian options?", a: "Absolutely. Over 60% of our menu is vegetarian — from our famous bao buns to Thai curry, cheesecakes, and momos. We also have vegan options." },
+  { q: "How far are you from Goa Airport?", a: "We're just a 2–3 minute drive from Dabolim (Goa) Airport. Perfect for a pre-flight meal or to kick-start your Goa trip right." },
+  { q: "When is live music?", a: "Live music typically happens every Friday and Saturday evening from 7:00 PM to 10:00 PM. Follow our Instagram for upcoming performances and special events." },
+  { q: "What's the price range?", a: "Our menu is priced between ₹80 and ₹600. A full meal for two with drinks and dessert typically comes to ₹600–₹1000." },
+  { q: "Can you accommodate large groups?", a: "Yes! We can accommodate groups of up to 30 people. For larger bookings, please call us directly so we can arrange the best setup for your group." },
+];
+
+// ===== RENDER DISHES =====
+function renderDishes(filter = 'all') {
+  const grid = document.getElementById('menuGrid');
+  const filtered = filter === 'all' ? dishes : dishes.filter(d => d.category === filter);
+  grid.innerHTML = filtered.map(d => `
+    <div class="dish-card">
+      ${d.chef ? '<div class="chef-badge">⭐ Chef\'s Pick</div>' : ''}
+      <div class="dish-img" style="background-image: url('${d.bg}')"></div>
+      <div class="dish-body">
+        <div class="dish-badge">${d.badge}</div>
+        <div class="dish-name">${d.name}</div>
+        <div class="dish-desc">${d.desc}</div>
+        <div class="dish-price">${d.price}</div>
+      </div>
+    </div>
+  `).join('');
+}
+renderDishes();
+
+document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderDishes(btn.dataset.filter);
+  });
+});
+
+// ===== RENDER GALLERY =====
+function renderGallery(filter = 'all') {
+  const grid = document.getElementById('galleryGrid');
+  const filtered = filter === 'all' ? galleryItems : galleryItems.filter(g => g.category === filter);
+  grid.innerHTML = filtered.map(g => `
+    <div class="gallery-item" data-src="${g.src}">
+      <div class="gal-img" style="background-image:url('${g.src}');height:${g.h}px;"></div>
+      <div class="gal-overlay"><span>⊕</span></div>
+    </div>
+  `).join('');
+  grid.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => openLightbox(item.dataset.src));
+  });
+}
+renderGallery();
+
+document.querySelectorAll('.filter-btn[data-gfilter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn[data-gfilter]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGallery(btn.dataset.gfilter);
+  });
+});
+
+function openLightbox(src) {
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+document.getElementById('lbClose').addEventListener('click', () => {
+  document.getElementById('lightbox').classList.remove('open');
+});
+document.getElementById('lightbox').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
+});
+
+// ===== RENDER REVIEWS =====
+const track = document.getElementById('reviewsTrack');
+track.innerHTML = reviews.map(r => `
+  <div class="review-card">
+    <div class="review-quote">"</div>
+    <p class="review-text">${r.text}</p>
+    <div class="reviewer">
+      <div class="reviewer-avatar">${r.initials}</div>
+      <div>
+        <div class="reviewer-name">${r.name}</div>
+        <div class="reviewer-meta">${r.meta} · ${'★'.repeat(r.stars)}</div>
+      </div>
+    </div>
+  </div>
+`).join('');
+
+let revIdx = 0;
+const totalCards = reviews.length;
+const visibleCards = () => window.innerWidth < 700 ? 1 : 3;
+const maxIdx = () => Math.ceil(totalCards / visibleCards()) - 1;
+
+function updateCarousel() {
+  const cardW = track.children[0]?.offsetWidth || 300;
+  const gap = 24;
+  track.style.transform = `translateX(-${revIdx * (cardW + gap)}px)`;
+  document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === revIdx));
+}
+
+const dotsEl = document.getElementById('reviewDots');
+dotsEl.innerHTML = Array.from({length: Math.ceil(totalCards / 3)}, (_, i) =>
+  `<div class="carousel-dot${i === 0 ? ' active' : ''}"></div>`
+).join('');
+dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => d.addEventListener('click', () => { revIdx = i; updateCarousel(); }));
+
+document.getElementById('revPrev').addEventListener('click', () => { if (revIdx > 0) { revIdx--; updateCarousel(); }});
+document.getElementById('revNext').addEventListener('click', () => { if (revIdx < maxIdx()) { revIdx++; updateCarousel(); }});
+
+// ===== RENDER FAQS =====
+document.getElementById('faqGrid').innerHTML = faqs.map((f, i) => `
+  <div class="faq-item" data-idx="${i}">
+    <div class="faq-q">
+      ${f.q}
+      <div class="faq-toggle">+</div>
+    </div>
+    <div class="faq-a">${f.a}</div>
+  </div>
+`).join('');
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+
+// ===== NAVBAR SCROLL =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+});
+document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ===== MOBILE NAV =====
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.add('open');
+});
+document.getElementById('mobileClose').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.remove('open');
+});
+document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.remove('open');
+}));
+
+// ===== THEME TOGGLE =====
+let dark = false;
+document.getElementById('themeToggle').addEventListener('click', () => {
+  dark = !dark;
+  document.body.setAttribute('data-dark', dark ? '' : null);
+  if (!dark) document.body.removeAttribute('data-dark');
+  document.getElementById('themeToggle').textContent = dark ? '☀️' : '🌙';
+});
+
+// ===== HERO BG PARALLAX =====
+setTimeout(() => {
+  document.getElementById('heroBg').classList.add('loaded');
+}, 100);
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const bg = document.getElementById('heroBg');
+  bg.style.transform = `translateY(${scrollY * 0.3}px)`;
+}, { passive: true });
+
+// ===== LOADER =====
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('loader').classList.add('hidden'), 1600);
+});
+
+// ===== ANIMATED COUNTERS =====
+function animateCount(el, target, isDecimal) {
+  const duration = 1800, start = performance.now();
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const ease = t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+    const val = isDecimal ? (ease * target).toFixed(1) : Math.round(ease * target).toLocaleString();
+    el.textContent = isDecimal ? val + '★' : val + (target >= 100 ? '+' : '');
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+const counters = document.querySelectorAll('[data-count]');
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target, val = parseFloat(el.dataset.count);
+      animateCount(el, val, val < 10);
+      counterObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObs.observe(c));
+
+// ===== SCROLL REVEAL =====
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => revealObs.observe(el));
+
+// ===== RESERVATION FORM =====
+document.getElementById('submitRes').addEventListener('click', () => {
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const guests = document.getElementById('fguests').value;
+  const date = document.getElementById('fdate').value;
+  const time = document.getElementById('ftime').value;
+  if (!name || !phone || !guests || !date || !time) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  document.getElementById('resForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+});
+
+// Set min date for reservation
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('fdate').setAttribute('min', today);
+</script>
+</body>
+</html>
